@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Contact</title>
-</head>
+<head><title>Contact Us</title></head>
 <body>
-    <h1>Contact Us</h1>
-    <p>This is the Contact page.</p>
+    <h2>Contact Form</h2>
+    <form method="POST" action="/submit">
+        <label>Name:</label><br>
+        <input type="text" name="name" required><br><br>
+
+        <label>Email:</label><br>
+        <input type="email" name="email" required><br><br>
+
+        <label>Message:</label><br>
+        <textarea name="message" required></textarea><br><br>
+
+        <input type="submit" value="Send">
+    </form>
 </body>
 </html>

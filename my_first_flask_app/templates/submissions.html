@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Submissions</title>
+</head>
+<body>
+    <h2>Submitted Messages</h2>
+    {% if entries %}
+        <table border="1" cellpadding="8">
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Message</th>
+            </tr>
+            {% for entry in entries %}
+            <tr>
+                <td>{{ entry.name }}</td>
+                <td>{{ entry.email }}</td>
+                <td>{{ entry.message }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <p>No submissions yet.</p>
+    {% endif %}
+</body>
+</html>

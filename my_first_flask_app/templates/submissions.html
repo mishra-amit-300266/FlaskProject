@@ -5,6 +5,12 @@
 </head>
 <body>
     <h2>Submitted Messages</h2>
+
+    <!-- Clear Button -->
+    <form method="POST" action="/clear" style="margin-bottom: 20px;">
+        <button type="submit">Clear All Submissions</button>
+    </form>
+
     {% if entries %}
         <table border="1" cellpadding="8">
             <tr>

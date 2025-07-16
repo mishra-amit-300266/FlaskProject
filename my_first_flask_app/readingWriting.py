@@ -30,5 +30,10 @@ def show_submissions():
 
     return render_template('submissions.html', entries=entries)
 
+@app.route('/clear', methods=['POST'])
+def clear_submissions():
+    open('submissions.txt', 'w').close()  # Clear the file by overwriting it with nothing
+    return render_template('submissions.html', entries=[])
+
 if __name__ == '__main__':
     app.run(debug=True)
